@@ -32,7 +32,8 @@ public class ReaperInvoker {
 
     public static void main(String[] args) throws Exception {
         if (args.length < 5) {
-            System.out.println("Usage: java -jar reaper.jar <host> <port> <binddn> <bindpwd> <basedn>");
+            System.out.println("Usage: java -jar reaper-invoker-1.0.0-SNAPSHOT-jar-with-dependencies.jar <host> <port> <binddn> <bindpwd> <basedn>");
+            System.exit(1);
         }
         try (LDAPConnectionFactory cf = new LDAPConnectionFactory(args[0], Integer.valueOf(args[1]),
                 Options.defaultOptions()
